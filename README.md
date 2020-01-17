@@ -1,5 +1,9 @@
 # WebSocketExplorer
-Learn about WebSocket and explorer the theory
+该项目仅仅为了练手的。
 
-Required: Tomcat 7.0.67 (Build Path --> Configure Build Path --> Libraries --> Add Library --> Server Library)
+需求：告警数据实时在前端展示；
 
+架构：
+1. snmp协议数据采集指标数据，并发送到kafka；
+2. Flink从kafka中接数据，定时从mysql中读取告警规则，对数据流做处理；
+3. 当数据值大于告警阈值时，实时将数据推送到前端展示。
